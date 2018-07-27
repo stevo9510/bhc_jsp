@@ -1,0 +1,73 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* Set color to all page's h2 headers */
+h2 {
+    color: darkblue
+}
+
+img.hikeImage  {
+    width: 90%;
+    border: 1px solid black;
+    vertical-align: top;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+/* Set properties for body of page */
+body {
+    background-color: #eff4f4;
+    color: black;
+    font-family: Tahoma;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-style: double;
+    border-width: 7px;
+    background: #CCE2FC;
+}
+
+.results {
+    font-size: large;
+}
+
+.resultText {
+	font-weight: bold;	
+}
+
+.warningText {
+    color: darkred;
+    font-weight: bold;
+}
+
+.helpIcon {
+    font-weight: bold;
+    color: blue;
+}
+
+.perPersonCostText {
+	font-size: x-large;
+	font-weight: bold;
+	color: #06823e;
+}
+
+.totalCostText {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #06823e;
+}
+
+button.requestQuote {
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 3px;
+}
+
+input:checked ~img {
+	border: 7px ridge darkblue;
+}
