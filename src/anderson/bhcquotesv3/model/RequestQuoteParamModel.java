@@ -9,20 +9,21 @@
  * 
  * 07/13/2018 - Initial
  * 07/19/2018 - Shell off some fields/methods to base class 
+ * 07/27/2018 - Name change to Model.
  */
 
-package anderson.bhcquotesv3;
+package anderson.bhcquotesv3.model;
 
 /**
  * Generic for the parameter's actual data type value
  * @author sande107
  * @param <T>
  */
-public class RequestQuoteParamObject<T> extends RequestQuoteParamBaseObject {
+public class RequestQuoteParamModel<T> extends RequestQuoteParamBaseModel {
 
 	private T value;
 
-	public RequestQuoteParamObject(String name, T value, ParamErrorType errorType) {
+	public RequestQuoteParamModel(String name, T value, ParamErrorType errorType) {
 		super(name, errorType);
 		this.value = value;
 	}

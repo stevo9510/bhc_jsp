@@ -1,11 +1,22 @@
-package anderson.bhcquotesv3;
+/**
+ * Copyright 2018
+ * Steven Anderson
+ * All rights reserved
+ * 
+ * Homework 10 - HikeModel 
+ * HikeModel.java - Model object that encapsulates hike details and properties to help render html view.   
+ * 
+ * 07/27/2018 - Initial
+ */
+
+package anderson.bhcquotesv3.model;
 
 import java.util.List;
 
 import com.rbevans.bookingrate.Rates;
 import com.rbevans.bookingrate.Rates.HIKE;
 
-public class HikeViewModel {
+public class HikeModel {
 
 	private Rates.HIKE hikeType;
 	private int hikeID;
@@ -14,7 +25,7 @@ public class HikeViewModel {
 	private List<Integer> validDurations;
 	private String onChangeJsFunctionName;
 	
-	public HikeViewModel(HIKE hikeType, int hikeID, String displayName, String normalIconFilePath, List<Integer> validDurations, String onChangeJsFunctionName) {
+	public HikeModel(HIKE hikeType, int hikeID, String displayName, String normalIconFilePath, List<Integer> validDurations, String onChangeJsFunctionName) {
 		this.hikeType = hikeType;
 		this.hikeID = hikeID;
 		this.displayName = displayName;
@@ -24,7 +35,7 @@ public class HikeViewModel {
 	}
 	
 	// For Java Bean support
-	public HikeViewModel() {
+	public HikeModel() {
 		
 	}
 	

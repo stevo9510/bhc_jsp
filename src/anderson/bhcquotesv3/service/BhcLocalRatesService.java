@@ -10,7 +10,7 @@
  * 07/02/2018
  */
 
-package anderson.bhcquotesv3;
+package anderson.bhcquotesv3.service;
 
 import java.util.Calendar;
 import java.util.Date;

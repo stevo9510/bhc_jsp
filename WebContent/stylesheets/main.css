@@ -38,8 +38,8 @@ body {
 	font-weight: bold;	
 }
 
-.warningText {
-    color: darkred;
+.warningText p {
+    
     font-weight: bold;
 }
 
