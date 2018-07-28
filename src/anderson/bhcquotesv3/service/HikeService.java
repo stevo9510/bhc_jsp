@@ -30,7 +30,7 @@ public interface HikeService {
 	 * @param hikeID
 	 * @return
 	 */
-	Optional<HikeModel> getHikeModelFromID(int hikeID);
+	Optional<HikeModel> getHikeModelFromID(Integer hikeID);
 
 	/**
 	 * Verifies if the passed duration is valid for the given hike model.  

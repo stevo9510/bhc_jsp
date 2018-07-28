@@ -51,7 +51,7 @@ public class LocalHikeService implements HikeService {
 	 * Get HikeModel from passed HikeID.   
 	 */
 	@Override
-	public Optional<HikeModel> getHikeModelFromID(int hikeID) {
+	public Optional<HikeModel> getHikeModelFromID(Integer hikeID) {
 		Optional<HikeModel> optHikeViewModel = Arrays.asList(hikeViewModels).stream()
 				.filter(vm -> vm.getHikeID() == hikeID).findFirst();
 		return optHikeViewModel;

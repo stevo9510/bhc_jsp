@@ -148,24 +148,27 @@ public class QuoteResultsController extends HttpServlet {
 		setAttributeIfExists(INVALID_DATE_PARAM_ATTRIBUTE, invalidDateParams, request);
 		
 		// Query the full hike model details from the hike service.
-		Optional<HikeModel> optHikeModel = hikeService.getHikeModelFromID(hikeID);
 		HikeModel hikeModel = null;
 
 		boolean isValidDuration = false;
-		if (hikeID != null && optHikeModel.isPresent()) {
-			// A hike model was found from the service, store it.
-			hikeModel = optHikeModel.get();
+		if (hikeID != null) {
+			Optional<HikeModel> optHikeModel = hikeService.getHikeModelFromID(hikeID);
+			if(optHikeModel.isPresent()) {
+				// A hike model was found from the service, store it.
+				hikeModel = optHikeModel.get();
 
-			// Validate the duration requested by the client for the given hike.
-			if(duration != null) {
-				isValidDuration = hikeService.isValidHikeDuration(hikeModel, duration);
-				if(!isValidDuration) {
-					request.setAttribute(INVALID_DURATION_ATTRIBUTE, hikeModel);
+				// Validate the duration requested by the client for the given hike.
+				if(duration != null) {
+					isValidDuration = hikeService.isValidHikeDuration(hikeModel, duration);
+					if(!isValidDuration) {
+						request.setAttribute(INVALID_DURATION_ATTRIBUTE, hikeModel);
+					}
 				}
 			}
-		} else {
-			request.setAttribute(INVALID_HIKE_ID_ATTRIBUTE, hikeID);
-		}
+			else {
+				request.setAttribute(INVALID_HIKE_ID_ATTRIBUTE, hikeID);
+			}
+		} 
 
 		// Validate the Party Size param
 		if(partySize != null) {
